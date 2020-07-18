@@ -1,0 +1,117 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #f1f5f8;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.has-text-blue{
+    color: #102a42;
+}
+
+.container{
+    width: 90%;
+    margin: 4em auto;
+}
+
+.is-shadow{
+    box-shadow: 0 0 5px #29282879;
+}
+
+.is-rounded{
+    border-radius: 10px;
+}
+
+main > h1, main > p{
+    text-align: center;
+}
+
+h1{
+    letter-spacing: 3px;
+    font-size: 3em;
+    color: #102a42;
+    margin-bottom: .5em;
+}
+
+p{
+    color: #99bbd7;
+}
+
+.card{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3em;
+}
+
+.card-image{
+    flex-basis: 48%;
+}
+
+.card-image > img{
+    object-fit: cover;
+    width: 100%;
+}
+
+/* -------- Card content --------- */
+
+.card-content{
+    flex-basis: 48%;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+
+/* ------- Tabs Links ---------- */
+
+.tabs-links{
+    list-style: none;
+    margin-top: 0;
+    padding: 0;
+    background-color: #99bbd7;
+    display: grid;
+    grid-template-rows: 3em;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.tabs-links li{
+    letter-spacing: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tabs-links > li:first-child{
+    background-color: #ffffff;
+    grid-column: 1;
+}
+
+/* ----------- Tabs ---------- */
+.tabs h3{
+    color: #102a42;
+    letter-spacing: 2px;
+}
+
+.tab-1{
+    padding: .8em;
+}
+
+@media (max-width: 768px){
+    .card{
+        flex-direction: column;
+    }
+
+    .card > div{
+        margin-bottom: 1.5em;
+    }
+}
+
+@media (max-width: 320px){
+
+    h1{
+        font-size: 2.5em;
+    }
+
+    .tabs-links li{
+        font-size: .8em;
+    }
+}
