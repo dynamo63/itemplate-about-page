@@ -69,6 +69,7 @@ p{
     padding: 0;
     background-color: #99bbd7;
     display: grid;
+    cursor: pointer;
     grid-template-rows: 3em;
     grid-template-columns: repeat(3,1fr);
 }
@@ -78,21 +79,39 @@ p{
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background-color .5s ease-out;
 }
 
-.tabs-links > li:first-child{
+.tabs-links li:active{
+    transform: scale(.9);
+}
+
+.tabs-links > li.active{
     background-color: #ffffff;
-    grid-column: 1;
+    /* grid-column: 1; */
 }
 
 /* ----------- Tabs ---------- */
+.tabs{
+    position: relative;
+}
+
 .tabs h3{
     color: #102a42;
     letter-spacing: 2px;
 }
 
-.tab-1{
+.tabs > div{
     padding: .8em;
+    position: absolute;
+    opacity: 0;
+    transform: translateX(15%);
+    transition: all .5s ease-in-out;
+}
+
+.tabs > div.active{
+    opacity: 1;
+    transform: translateX(0);
 }
 
 @media (max-width: 768px){
